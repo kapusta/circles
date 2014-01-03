@@ -1,0 +1,6 @@
+{
+  "name": "dkCircles",
+  "version": "0.0.1",
+  "main": ["dk-circles.min.js"],
+  "ignore": ["circles.js","dk-circles.js","Gruntfile.js", ".gitignore", "bower.json", "package.json", "spec"]
+} // node_modules not listed because it's not actually in the repo (ignored via .gitignore)

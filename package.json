@@ -1,0 +1,24 @@
+{
+  "name": "dkCircles",
+  "title": "dkCircles",
+  "description": "Lightwheight JavaScript library that generates circular graphs in SVG, wrapped in an AngularJS directive.",
+  "keywords": ["canvas", "charts", "circles", "graphics", "graphing", "graphs", "svg"],
+  "banner": "/* dkCircles - https://github.com/kapusta/circles - copyright Daniel Kapusta - MIT-LICENSE */\n/* Circles - https://github.com/lugolabs/circles - copyright Artan Sinani - MIT-LICENSE */\n",
+  "version": "0.0.1",
+  "author": {
+    "name": "Daniel Kapusta",
+    "url": "http://about.me/dankapusta"
+  },
+  "version": "0.0.1",
+  "licenses": [{
+    "type": "MIT",
+    "url": "https://github.com/lugolabs/circles/blob/master/MIT-LICENSE"
+  }],
+  "homepage": "https://github.com/kapusta/circles",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-contrib-watch": "~0.3.1"
+  }
+}
