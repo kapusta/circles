@@ -1,5 +1,4 @@
-// Example: <span dk-circles id="foo" circ-percentage="{{some.value}}" circ-radius="50" circ-width="10" circ-text="{{some.value}}"></span>
-// FYI, the text value should be a number, not a label since maths are done to it.
+// Example: <span dk-circles id="foo" circ-percentage="{{some.value}}"></span>
 (function(angular, Circles, document) {
   "use strict"; // ECMA5 strict mode
   
@@ -18,6 +17,7 @@
             percentage: parseFloat(attrs.circPercentage).toFixed(2),
             radius:     parseInt(attrs.circRadius, 10) || 50,
             width:      parseInt(attrs.circWidth, 10) || 10,
+            number:     attrs.circNumber || parseFloat(attrs.circPercentage).toFixed(2),
             text:       attrs.circText || null,
             colors:     (attrs.circColors) ? attrs.circColors.split(",") : ['#D3B6C6', '#4B253A'],
             duration:   parseInt(attrs.circDuration, 10) || null
