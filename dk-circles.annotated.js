@@ -24,7 +24,7 @@ Example usage...
           }
         );
       },
-      controller: function($scope, $element, $attrs) {
+      controller: ['$scope', '$element', '$attrs', function($scope, $element, $attrs) {
         if (!$attrs.id) {
           $log.log("No id was provided in the dkCircles directive declaration, please provide one.");
         } else {
@@ -46,7 +46,7 @@ Example usage...
             Circles.create(conf);
           };
         }
-      }
+      }]
     };
   }]);
 

@@ -4,10 +4,11 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks("grunt-contrib-jshint");
   grunt.loadNpmTasks("grunt-contrib-uglify");
   grunt.loadNpmTasks("grunt-contrib-watch");
+  grunt.loadNpmTasks("grunt-ng-annotate");
+  grunt.loadNpmTasks('grunt-contrib-jasmine');
   
   // if you simply run "grunt" these default tasks will execute, IN THE ORDER THEY APPEAR!
-  grunt.registerTask('default', ["jshint", "uglify"]);
-  grunt.registerTask('lint', ["jshint"]); // does not pass, and for now, I'm not gunna make it pass.
+  grunt.registerTask('default', ["jshint", "ngAnnotate", "uglify"]);
   
   grunt.initConfig({
     /* a pointer to an external package.json file */
@@ -40,15 +41,38 @@ module.exports = function (grunt) {
       },
     },
     
+    // use ngAnnotate instead of ngmin -> https://github.com/btford/ngmin/issues/93
+    // https://github.com/mzgol/grunt-ng-annotate
+    ngAnnotate: {
+      options: {
+        add: true,
+        singleQuotes: true
+      },
+      otk: {
+        files: {
+          'dk-circles.annotated.js': ['dk-circles.js']
+        }
+      }
+    },
+    
     uglify: {
       ngCircles: {
         options: {
           banner: '<%= pkg.banner %>'
         },
         files: {
-          'dk-circles.min.js': ['circles.js', 'dk-circles.js'],
+          'dk-circles.min.js': ['circles.js', 'dk-circles.annotated.js'],
         }
       },
+    },
+    
+    jasmine: {
+      pivotal: {
+        src: 'circles.js',
+        options: {
+          specs: 'spec/*Spec.js',
+        }
+      }
     },
     
     /* watch the development files for saves and do stuff when we observe a save */
@@ -59,4 +83,5 @@ module.exports = function (grunt) {
       }
     }
   });
-};
+
+}
