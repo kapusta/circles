@@ -1,6 +1,19 @@
 {
   "name": "dkCircles",
-  "version": "0.0.1",
   "main": ["dk-circles.min.js"],
-  "ignore": ["circles.js","dk-circles.js","Gruntfile.js", ".gitignore", "bower.json", "package.json", "spec"]
+  "ignore": ["circles.js","dk-circles.js","Gruntfile.js", ".gitignore", "bower.json", "package.json", "spec"],
+  "version": "0.0.6",
+  "homepage": "https://github.com/kapusta/dk.circles",
+  "authors": [
+    "lugolabs",
+    "kapusta"
+  ],
+  "description": "Lightweight JavaScript library that generates circular graphs in SVG. Now with animation.",
+  "keywords": [
+    "circles",
+    "js",
+    "javascript",
+    "svg"
+  ],
+  "license": "MIT"
 }
