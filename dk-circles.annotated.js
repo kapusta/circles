@@ -35,7 +35,7 @@ Example usage...
               value:      ($attrs.circValue) ? $attrs.circValue : null,
               maxValue:   ($attrs.circMaxValue) ? $attrs.circMaxValue : 100,
               width:      ($attrs.circWidth) ? parseInt($attrs.circWidth, 10) : 10,
-              text:       function(value){return value + " ";},
+              text:       typeof($attrs.circText) !== "undefined" ? $attrs.circText : function(value){return value + " ";},
               colors:     ($attrs.circColors) ? $attrs.circColors.split(",") : ['#D3B6C6', '#4B253A'],
               duration:   ($attrs.circDuration) ? parseInt($attrs.circDuration, 10) : null,
               wrpClass:   'circles-wrp',

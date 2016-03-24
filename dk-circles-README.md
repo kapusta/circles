@@ -22,7 +22,7 @@ An AngularJS directive that creates circular graphs using circles.js
 * `circ-width` - the width of the ring (default: 10)
 * `circ-value` - the number to display at the centre of the graph (default: null (ie, the value will show))
 * `circ-max-value` - the max value (defaults to 100)
-* `circ-text` - the text to display after the number (default: null)
+* `circ-text` - the text to display (default: circ-value)
 * `circ-colors` - a comma delimited list of colors (default: '#D3B6C6','#4B253A')
 * `circ-duration` - value in ms of animation's duration (default: null (no animation))
 
